@@ -1,0 +1,20 @@
+PASS ARM core: 102 signed endpoints / 17 resolutions, fractional restart, 1,250,000 pulses forward and return, DINT bounds (3.05 s)
+PASS full firmware PP: 15 holds; 47->63 accepts; exact +1000 (9984 ticks)
+PASS full firmware PP: one finite target holds, no repeat at held controlword 63
+PASS full firmware PP: reverse across origin to -1; no tolerance deadband
+PASS full firmware CSP: actual PhaseGet accounting, skipped cycle, endpoint convergence and stable hold
+PASS full firmware: OP-loss protection retained
+PASS full firmware: disable protection retained
+PASS full firmware: live resolution change cannot corrupt counts
+PASS full firmware CSP: 2 ms PDO trajectory, +one revolution and return
+PASS CSP: target history cannot generate wrong-direction feed-forward
+PASS CSP: discontinuous external reversal is filtered continuously and finishes at the held endpoint
+PASS quintic CSP 1000 counts/rev 1.5 s: no unintended reverse or phase overshoot; exact endpoints; max jump 0.1250 rpm
+PASS quintic CSP 40000 counts/rev 1.5 s: no unintended reverse or phase overshoot; exact endpoints; max jump 0.1250 rpm
+PASS quintic CSP 1000 counts/rev 2.0 s: no unintended reverse or phase overshoot; exact endpoints; max jump 0.1250 rpm
+PASS new PLC ST + ARM firmware: three complete circles, 500 ms pauses, no reverse commands or premature completion
+PASS full firmware CSV: 60 rpm still gives one revolution per second
+PASS full firmware: latched motor fault protection retained
+All pulse-position ARM checks passed; no hardware test was performed.
+
+STDERR:

@@ -1,0 +1,10 @@
+PASS cold boot calibrates zero without energizing either phase
+PASS retained enable cannot borrow calibration permission
+PASS out-of-range ADC baseline fails with PWM off
+PASS noisy ADC baseline fails with PWM off
+PASS 24 V startup under-voltage remains latched and disabled
+PASS 24 V startup over-voltage remains latched and disabled
+PASS running motor: undervoltage PDO, reset edge, red LED clears and fresh motion after DMA gaps
+PASS 7 unpowered-startup ARM tests.
+
+STDERR:

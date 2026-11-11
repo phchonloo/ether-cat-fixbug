@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<PropertyGroup>
+<FileVersion>1.0.0.0</FileVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{7dfc2181-2104-4062-8e78-e2ee173efd38}</ProjectGuid>
+<SubObjectsSortedByName>True</SubObjectsSortedByName><Name>FCM_Homing</Name><ProgramVersion>3.1.4024.0</ProgramVersion>
+<DownloadApplicationInfo>true</DownloadApplicationInfo><WriteProductVersion>true</WriteProductVersion><GenerateTpy>false</GenerateTpy>
+<Application>{ac17d27d-a5c8-4f76-9b20-5dfd8a54d07f}</Application><TypeSystem>{5d7bda6b-afaa-45a7-97f4-a2907e855d71}</TypeSystem>
+<Implicit_Task_Info>{e70ef901-38e3-4dca-bd3e-d11b2b7cb352}</Implicit_Task_Info><Implicit_KindOfTask>{ea2d3f7b-d943-4e12-83f9-b210ced992ce}</Implicit_KindOfTask>
+<Implicit_Jitter_Distribution>{ea4e9645-0ecf-40de-a534-2c9c7a9a51d3}</Implicit_Jitter_Distribution><LibraryReferences>{33f8885f-86d3-4404-9f29-ccf877ebea44}</LibraryReferences>
+</PropertyGroup>
+<ItemGroup>
+    <Compile Include="GVLs\GVL_HM.TcGVL"><SubType>Code</SubType><LinkAlways>true</LinkAlways></Compile>
+    <Compile Include="GVLs\GVL_FCM_IO.TcGVL"><SubType>Code</SubType><LinkAlways>true</LinkAlways></Compile>
+    <Compile Include="GVLs\GVL_STEP_IO.TcGVL"><SubType>Code</SubType><LinkAlways>true</LinkAlways></Compile>
+    <Compile Include="POUs\MAIN.TcPOU"><SubType>Code</SubType></Compile>
+    <Compile Include="PlcTask.TcTTO"><SubType>Code</SubType></Compile>
+</ItemGroup>
+<ItemGroup><Folder Include="GVLs"/><Folder Include="POUs"/></ItemGroup>
+<ItemGroup>
+<PlaceholderReference Include="Tc2_Standard"><DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution><Namespace>Tc2_Standard</Namespace></PlaceholderReference>
+<PlaceholderReference Include="Tc2_System"><DefaultResolution>Tc2_System, * (Beckhoff Automation GmbH)</DefaultResolution><Namespace>Tc2_System</Namespace></PlaceholderReference>
+<PlaceholderReference Include="Tc3_Module"><DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution><Namespace>Tc3_Module</Namespace></PlaceholderReference>
+</ItemGroup>
+</Project>

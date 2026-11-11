@@ -1,0 +1,2 @@
+# Preserve CP936/UTF-8 source files and their existing line endings.
+* -text

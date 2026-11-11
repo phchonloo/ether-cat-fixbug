@@ -1,0 +1,3 @@
+PASS release: HEX matches ELF, parameter pages excluded, top-level files match, fixed linker and unchanged PDO/identity
+
+STDERR:

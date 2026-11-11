@@ -1,0 +1,33 @@
+{
+  "passed": 27,
+  "cases": [
+    "mode 1 direction -1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse",
+    "mode 1 direction 1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse",
+    "mode 3 direction -1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse",
+    "mode 3 direction 1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse",
+    "mode 8 direction -1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse",
+    "mode 8 direction 1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse",
+    "mode 9 direction -1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse",
+    "mode 9 direction 1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse",
+    "mode 1 direction -1: may leave the opposite active limit",
+    "mode 1 direction 1: may leave the opposite active limit",
+    "mode 3 direction -1: may leave the opposite active limit",
+    "mode 3 direction 1: may leave the opposite active limit",
+    "mode 8 direction -1: may leave the opposite active limit",
+    "mode 8 direction 1: may leave the opposite active limit",
+    "mode 9 direction -1: may leave the opposite active limit",
+    "mode 9 direction 1: may leave the opposite active limit",
+    "mode 1 direction -1: initial active limit blocks first motion",
+    "mode 1 direction 1: initial active limit blocks first motion",
+    "mode 3 direction -1: initial active limit blocks first motion",
+    "mode 3 direction 1: initial active limit blocks first motion",
+    "mode 8 direction -1: initial active limit blocks first motion",
+    "mode 8 direction 1: initial active limit blocks first motion",
+    "mode 9 direction -1: initial active limit blocks first motion",
+    "mode 9 direction 1: initial active limit blocks first motion",
+    "contradictory two limits stop immediately and block reset until one is released",
+    "CSP departure then reversal cannot emit its first step back into an active limit",
+    "limit brake follows 6085 independently of 6084"
+  ],
+  "hardware_operated": false
+}

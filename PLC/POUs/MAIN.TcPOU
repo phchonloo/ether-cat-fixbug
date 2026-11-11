@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+<POU Name="MAIN" Id="{09b0c080-9214-42a0-9f69-8c01bbd0c3bf}" SpecialFunc="None">
+<Declaration><![CDATA[PROGRAM MAIN
+VAR
+    bPrevEnable : BOOL := TRUE;
+    bAccepted : BOOL := FALSE;
+    bHealthy : BOOL;
+    bPrevStart : BOOL := TRUE;
+    bPrevReset : BOOL := TRUE;
+    bReset : BOOL;
+    bStart : BOOL;
+    bCancel : BOOL;
+    nDriveState : UINT;
+    nTaskIndex : DINT;
+    nOverruns : UINT;
+    nCounter : UDINT;
+    nResetCount : UINT;
+END_VAR
+]]></Declaration>
+<Implementation><ST><![CDATA[// Standalone HM bench. Never run alongside the original CSP MAIN.
+GVL_FCM_IO.qControlWord := 0;
+GVL_FCM_IO.qMode := 6;
+GVL_FCM_IO.qTargetVelocity := 0;
+GVL_FCM_IO.qTargetPosition := GVL_FCM_IO.iActualPosition;
+GVL_STEP_IO.qControlWord := 0;
+GVL_STEP_IO.qTargetPosition := GVL_STEP_IO.iActualPosition;
+GVL_HM.nStatusWord := GVL_FCM_IO.iStatusWord;
+GVL_HM.nModeDisplay := GVL_FCM_IO.iModeDisplay;
+GVL_HM.nActualPosition := GVL_FCM_IO.iActualPosition;
+GVL_HM.bBusOk := NOT GVL_FCM_IO.iWcState AND ((GVL_FCM_IO.iEthercatState AND UINT#16#000F) = 8);
+nTaskIndex := GETCURTASKINDEXEX();
+IF _TaskInfo[nTaskIndex].CycleTimeExceeded THEN
+    IF nOverruns < 3 THEN nOverruns := nOverruns + 1; END_IF;
+ELSE
+    nOverruns := 0;
+END_IF;
+GVL_HM.bTimingOk := (_TaskInfo[nTaskIndex].CycleTime = 20000) AND (nOverruns < 3);
+bHealthy := GVL_HM.bBusOk AND GVL_HM.bTimingOk;
+nDriveState := GVL_FCM_IO.iStatusWord AND UINT#16#006F;
+bStart := GVL_HM.bStart AND NOT bPrevStart;
+bPrevStart := GVL_HM.bStart;
+bReset := GVL_HM.bReset AND NOT bPrevReset;
+bPrevReset := GVL_HM.bReset;
+bCancel := GVL_HM.bCancel;
+GVL_HM.bStart := FALSE;
+GVL_HM.bCancel := FALSE;
+
+IF NOT GVL_HM.bEnable THEN
+    bAccepted := FALSE;
+    GVL_HM.nState := 0;
+    nCounter := 0;
+ELSIF NOT bPrevEnable AND bHealthy THEN
+    bAccepted := TRUE;
+    GVL_HM.nState := 5;
+    GVL_HM.nError := 0;
+    nCounter := 0;
+    nResetCount := 0;
+END_IF;
+bPrevEnable := GVL_HM.bEnable;
+
+IF bAccepted THEN
+    IF NOT GVL_HM.bBusOk THEN
+        GVL_HM.nError := 1; GVL_HM.nState := 90;
+    ELSIF NOT GVL_HM.bTimingOk THEN
+        GVL_HM.nError := 2; GVL_HM.nState := 90;
+    ELSIF (GVL_FCM_IO.iStatusWord AND UINT#16#0008) <> 0 THEN
+        GVL_HM.nError := 3; GVL_HM.nState := 90;
+    END_IF;
+    IF GVL_HM.nState = 90 THEN bAccepted := FALSE; END_IF;
+END_IF;
+
+IF bAccepted THEN
+    CASE GVL_HM.nState OF
+    5:
+        // Transmit the default zero controlword for one cycle before shutdown.
+        GVL_HM.nState := 10;
+    10:
+        nCounter := nCounter + 1;
+        CASE nDriveState OF
+        64: GVL_FCM_IO.qControlWord := 6;
+        33: GVL_FCM_IO.qControlWord := 7;
+        35: GVL_FCM_IO.qControlWord := 15;
+        39:
+            GVL_FCM_IO.qControlWord := 15;
+            IF GVL_FCM_IO.iModeDisplay = 6 THEN
+                GVL_HM.nState := 20; nCounter := 0;
+            END_IF;
+        ELSE GVL_FCM_IO.qControlWord := 0;
+        END_CASE;
+        IF nCounter >= 1500 THEN
+            GVL_HM.nError := 4; GVL_HM.nState := 90;
+        END_IF;
+    20:
+        GVL_FCM_IO.qControlWord := 15;
+        IF (nDriveState <> 39) OR (GVL_FCM_IO.iModeDisplay <> 6) THEN
+            GVL_HM.nError := 7; GVL_HM.nState := 90;
+        ELSE
+            nCounter := nCounter + 1;
+            IF nCounter >= 20 THEN GVL_HM.nState := 30; END_IF;
+        END_IF;
+    30:
+        GVL_FCM_IO.qControlWord := 15;
+        IF bStart AND NOT bCancel THEN
+            GVL_HM.nState := 35; nCounter := 0;
+            GVL_FCM_IO.qControlWord := 31;
+        END_IF;
+    35:
+        GVL_FCM_IO.qControlWord := 31;
+        nCounter := nCounter + 1;
+        IF bCancel THEN
+            GVL_HM.nState := 45; nCounter := 0;
+            GVL_FCM_IO.qControlWord := 271;
+        ELSIF (GVL_FCM_IO.iStatusWord AND UINT#16#2000) <> 0 THEN
+            GVL_HM.nError := 6; GVL_HM.nState := 90;
+        ELSIF (nCounter >= 2) AND ((GVL_FCM_IO.iStatusWord AND UINT#16#1400) = UINT#16#1400) THEN
+            GVL_HM.nState := 40;
+        ELSIF nCounter >= 15500 THEN
+            GVL_HM.nError := 5; GVL_HM.nState := 90;
+        END_IF;
+    40: GVL_FCM_IO.qControlWord := 15;
+    45:
+        GVL_FCM_IO.qControlWord := 271;
+        nCounter := nCounter + 1;
+        IF (nCounter >= 2) AND ((GVL_FCM_IO.iStatusWord AND UINT#16#0400) <> 0) THEN
+            GVL_HM.nState := 50;
+        ELSIF nCounter >= 1500 THEN
+            GVL_HM.nError := 5; GVL_HM.nState := 90;
+        END_IF;
+    50: GVL_FCM_IO.qControlWord := 15;
+    ELSE GVL_HM.nError := 7; GVL_HM.nState := 90;
+    END_CASE;
+    IF (GVL_HM.nState >= 30) AND (GVL_HM.nState < 90) THEN
+        IF (nDriveState <> 39) OR (GVL_FCM_IO.iModeDisplay <> 6) THEN
+            GVL_HM.nError := 7; GVL_HM.nState := 90;
+        END_IF;
+    END_IF;
+END_IF;
+IF GVL_HM.nState = 90 THEN
+    bAccepted := FALSE;
+    GVL_FCM_IO.qControlWord := 0;
+END_IF;
+
+// Bounded fault reset; this path never enables either motor.
+IF bReset AND NOT GVL_HM.bEnable AND bHealthy THEN nResetCount := 50; END_IF;
+GVL_HM.bReset := FALSE;
+IF GVL_HM.bEnable OR NOT bHealthy THEN nResetCount := 0; END_IF;
+IF nResetCount > 0 THEN
+    IF (GVL_FCM_IO.iStatusWord AND UINT#16#0008) <> 0 THEN
+        GVL_FCM_IO.qControlWord := 128;
+    END_IF;
+    nResetCount := nResetCount - 1;
+END_IF;
+GVL_HM.bReady := bAccepted AND (GVL_HM.nState = 30);
+GVL_HM.bBusy := bAccepted AND ((GVL_HM.nState = 35) OR (GVL_HM.nState = 45));
+GVL_HM.bDone := bAccepted AND (GVL_HM.nState = 40);
+GVL_HM.bCanceled := bAccepted AND (GVL_HM.nState = 50);
+GVL_HM.bError := GVL_HM.nError <> 0;
+]]></ST></Implementation>
+</POU>
+</TcPlcObject>

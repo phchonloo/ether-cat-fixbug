@@ -1,0 +1,25 @@
+# Local Python dependencies and test build caches
+__pycache__/
+*.py[cod]
+/tests/.*/
+/plc_tests/.*/
+node_modules/
+
+# Keil intermediate files and per-user settings
+*.o
+*.d
+*.crf
+*.lst
+*.dep
+*.uvguix.*
+*.uvgui.*
+*.bak
+*.tmp
+*.iex
+*.build_log.htm
+!/program/FCM4E1553 Ethercat/MDK-ARM/N32G455/startup_n32g45x.o
+
+# Archive-based deliveries
+*.zip
+*.7z
+SHA256_*.json

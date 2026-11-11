@@ -1,0 +1,28 @@
+PASS defaults and reset: 3 A peak / 100 percent / 200 ms; no normal enable
+PASS real CoE access: parameter limits, signed negatives, lengths, subindex and CA
+PASS writes require PREOP, disabled and no emitted motion
+PASS real ISR/library PI/PWM receives 100 mA nominal peak
+PASS real ISR/library PI/PWM receives 500 mA nominal peak
+PASS real ISR/library PI/PWM receives 1000 mA nominal peak
+PASS real ISR/library PI/PWM receives 2000 mA nominal peak
+PASS real ISR/library PI/PWM receives 3000 mA nominal peak
+PASS 200 ms hold boundary, no legacy 63.75 ms drop; first moving cycle restores run
+PASS actual ISR, library reference and raw ADC detect absent motor despite 8 ms foreground
+PASS hold delay and percent boundaries do not overflow or shut off holding current
+PASS 6075 affects no current-loop reference, even when zero
+PASS original PI reacts to measured phase ADC error, not telemetry/command feedback
+PASS all phase quadrants retain signs and bounded references/PWM
+PASS power inhibit clears PI and PWM without phase emission: zero
+PASS power inhibit clears PI and PWM without phase emission: gain
+PASS power inhibit clears PI and PWM without phase emission: headroom
+PASS power inhibit clears PI and PWM without phase emission: fault
+PASS power inhibit clears PI and PWM without phase emission: hardware
+PASS power inhibit clears PI and PWM without phase emission: al
+PASS power inhibit clears PI and PWM without phase emission: disable
+PASS pending CSP motion restores full current on its first tick
+PASS VDDA/gain update cached control scaling; display zeros do not alter PI auto-zero
+PASS library inhibit clears current PI/output: ready_ad
+PASS library inhibit clears current PI/output: EnaFlag
+25 current-control ARM tests passed (offline only).
+
+STDERR:

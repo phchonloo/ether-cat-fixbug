@@ -1,0 +1,12 @@
+PASS delivered PLC + ARM: HOME 19 initial False -> bDone / one start
+PASS delivered PLC + ARM: HOME 19 initial True -> bDone / one start
+PASS delivered PLC + ARM: HOME 20 initial False -> bDone / one start
+PASS delivered PLC + ARM: HOME 20 initial True -> bDone / one start
+PASS delivered PLC + ARM: HOME 21 initial False -> bDone / one start
+PASS delivered PLC + ARM: HOME 21 initial True -> bDone / one start
+PASS delivered PLC + ARM: HOME 22 initial False -> bDone / one start
+PASS delivered PLC + ARM: HOME 22 initial True -> bDone / one start
+PASS delivered PLC + ARM: HOME timeout -> nError=6, disabled, no restart
+PASS delivered PLC + ARM: HOME limit -> nError=6, disabled, no restart
+
+STDERR:

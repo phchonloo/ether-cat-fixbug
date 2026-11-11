@@ -1,0 +1,14 @@
+{
+  "hex_bytes": 94300,
+  "maximum_flash_address": "0x801705b",
+  "parameter_region": "0x0803F000..0x0803FFFF",
+  "hex_matches_elf": true,
+  "pdo_and_identity_unchanged": true,
+  "sha256": {
+    "FCM_Protection_SysTickFix_20261103.axf": "89ce0d9b4965df7bf5bb715fc836b54e5556345049b950d668f84e04c79fb62a",
+    "FCM_Protection_SysTickFix_20261103.hex": "9b29a9b9118270e63b738cb9b25e1cad9fe01d8c99f30828c7ae87aa96021cd1",
+    "FCM4E1553_CiA402_Protection_SysTickFix_20261103.xml": "2fb1eaea1b0fdfd92434fe023a7042519046209c2e2b6a308ddf155e2f0e611b",
+    "PLC/FCM_Homing.plcproj": "f144216e3eb99109807a63d59c799de501295d834a8d390db7482091465e6a73"
+  },
+  "hardware_operated": false
+}

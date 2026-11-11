@@ -1,0 +1,30 @@
+PASS mode 1 direction -1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse
+PASS mode 1 direction 1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse
+PASS mode 3 direction -1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse
+PASS mode 3 direction 1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse
+PASS mode 8 direction -1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse
+PASS mode 8 direction 1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse
+PASS mode 9 direction -1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse
+PASS mode 9 direction 1: 6085 brake, bounce-resistant latch, vendor error and no automatic reverse
+PASS mode 1 direction -1: may leave the opposite active limit
+PASS mode 1 direction 1: may leave the opposite active limit
+PASS mode 3 direction -1: may leave the opposite active limit
+PASS mode 3 direction 1: may leave the opposite active limit
+PASS mode 8 direction -1: may leave the opposite active limit
+PASS mode 8 direction 1: may leave the opposite active limit
+PASS mode 9 direction -1: may leave the opposite active limit
+PASS mode 9 direction 1: may leave the opposite active limit
+PASS mode 1 direction -1: initial active limit blocks first motion
+PASS mode 1 direction 1: initial active limit blocks first motion
+PASS mode 3 direction -1: initial active limit blocks first motion
+PASS mode 3 direction 1: initial active limit blocks first motion
+PASS mode 8 direction -1: initial active limit blocks first motion
+PASS mode 8 direction 1: initial active limit blocks first motion
+PASS mode 9 direction -1: initial active limit blocks first motion
+PASS mode 9 direction 1: initial active limit blocks first motion
+PASS contradictory two limits stop immediately and block reset until one is released
+PASS CSP departure then reversal cannot emit its first step back into an active limit
+PASS limit brake follows 6085 independently of 6084
+PASS 27 compiled ARM directional-limit tests.
+
+STDERR:

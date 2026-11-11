@@ -1,0 +1,24 @@
+
+STDERR:
+test_already_high_enable_needs_edge (__main__.Tests) ... ok
+test_cancel_waits_for_stop (__main__.Tests) ... ok
+test_disable_immediate (__main__.Tests) ... ok
+test_disabled (__main__.Tests) ... ok
+test_done_one_per_enable (__main__.Tests) ... ok
+test_drive_fault (__main__.Tests) ... ok
+test_early_start_not_queued (__main__.Tests) ... ok
+test_enable_and_hm_timeout (__main__.Tests) ... ok
+test_enable_and_start (__main__.Tests) ... ok
+test_forced_start_not_queued (__main__.Tests) ... ok
+test_held_reset_is_bounded (__main__.Tests) ... ok
+test_homing_error (__main__.Tests) ... ok
+test_mode_loss_same_scan (__main__.Tests) ... ok
+test_reset_never_enables (__main__.Tests) ... ok
+test_three_consecutive_overruns (__main__.Tests) ... ok
+test_wc_and_bus_latched (__main__.Tests) ... ok
+test_wrong_period (__main__.Tests) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.183s
+
+OK

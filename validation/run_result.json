@@ -1,0 +1,58 @@
+[
+  {
+    "script": "tools/build_protection_esi.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_systick_watchdog.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_limits.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_plc_protection_bridge.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_protection.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_drive_current.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_drive_boot.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_homing.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_drive_faults.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_plc_home_switch.py",
+    "exit": 0
+  },
+  {
+    "script": "plc_tests/verify.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_pdi_faults.py",
+    "exit": 0
+  },
+  {
+    "script": "tests/verify_pulse_position.py",
+    "exit": 0
+  },
+  {
+    "script": "tools/check_release.py",
+    "exit": 0
+  }
+]

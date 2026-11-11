@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+<GVL Name="GVL_STEP_IO" Id="{eb08d37a-444a-4406-8d3c-11fe358bc929}">
+<Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+    // Default Rx1600 = 6 bytes, Tx1A00 = 19 bytes.
+    // Configure STEP Startup SDO 6060:00=8 (1 byte), PS transition.
+    qControlWord AT %Q* : UINT; // 1600 / 6040:00
+    qTargetPosition AT %Q* : DINT; // 1600 / 607A:00
+    iErrorCode AT %I* : UINT; // 1A00 / 603F:00
+    iStatusWord AT %I* : UINT; // 1A00 / 6041:00
+    iModeDisplay AT %I* : SINT; // 1A00 / 6061:00
+    iActualPosition AT %I* : DINT; // 1A00 / 6064:00
+    iTouchProbeStatus AT %I* : UINT; // 1A00 / 60B9:00; unused
+    iTouchProbePos1 AT %I* : DINT; // 1A00 / 60BA:00; unused
+    iDigitalInputs AT %I* : UDINT; // 1A00 / 60FD:00; diagnostic only
+    iWcState AT %I* : BOOL; // THIS BOX WcState
+    iEthercatState AT %I* : UINT; // THIS BOX InfoData/State
+END_VAR
+]]></Declaration>
+</GVL>
+</TcPlcObject>

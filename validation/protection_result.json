@@ -1,0 +1,25 @@
+{
+  "passed": 19,
+  "cases": [
+    "blank Flash uses 3000 defaults and leaves output interlocked",
+    "real SDO signatures, permissions, health and command length checks",
+    "save/load retains settings and never restores enable, target, position or HM success",
+    "unchanged saves cause no Flash wear; changes alternate A/B with newest generation",
+    "pending save locks config writers and power output, never only half a snapshot",
+    "interruption at every one of 33 program/commit words preserves the previous complete save",
+    "CRC/header/schema/commit corruption falls back to the last valid page or factory defaults",
+    "1011 restore is itself transactional, takes effect next boot and inhibits intervening motion",
+    "erase/program/readback failure and conditions changing after SDO acceptance do not publish a bad page",
+    "retained enable, SDO disable and cached Sync0 values cannot release the restart interlock",
+    "watchdog is hardware-enabled and feeds only after main, TIM8 and SysTick all progress",
+    "3 consecutive fresh low-bus frames remove PWM and latch 3220 without emergency Flash writes",
+    "PVD logic-supply fall cuts MOE immediately and never self-clears on voltage recovery",
+    "fatal exception output-off clears MOE and all four compares without relying on ADC state",
+    "even a correct CRC cannot load wrong-resolution or out-of-range parameters",
+    "save rechecks both pages and reports SDO failure rather than erasing the sole fallback",
+    "generation serial arithmetic selects the newest record across a 32-bit wrap",
+    "count units and matching speed/ramp values reload together without reinterpretation",
+    "an early PLC enable waits in disabled state until unpowered boot calibration has released"
+  ],
+  "hardware_operated": false
+}

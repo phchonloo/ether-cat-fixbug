@@ -1,0 +1,7 @@
+PASS real CiA402 + delivered PLC: disabled PDO, manual enable, HOME21 success and enabled hold
+PASS MCU restart with old PLC enable: no automatic restart while ready
+PASS MCU restart during HOME: latched PLC error, new enable edge required
+PASS valid bus recovery alone cannot resume the PLC motion sequence
+PASS 4 PLC ST + actual ARM CiA402/protection integration cases.
+
+STDERR:

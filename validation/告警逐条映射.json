@@ -1,0 +1,112 @@
+[
+  {
+    "file": "../system/delay/systick.c",
+    "id": "550-D",
+    "message": "variable \"fac_ms\"  was set but never used",
+    "old_line": 19,
+    "new_line": 19,
+    "old_statement": "static u16 fac_ms=0;\t\t\t\t\t\t\t//ms延时倍乘数,在os下,代表每个节拍的ms数",
+    "new_statement": "static u16 fac_ms=0;\t\t\t\t\t\t\t//ms延时倍乘数,在os下,代表每个节拍的ms数",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/eeprom_console.c",
+    "id": "223-D",
+    "message": "function \"uart_read\" declared implicitly",
+    "old_line": 36,
+    "new_line": 45,
+    "old_statement": "length = uart_read(received, (uint16_t)sizeof(received));",
+    "new_statement": "length = uart_read(received, (uint16_t)sizeof(received));",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/eeprom_console.c",
+    "id": "223-D",
+    "message": "function \"uart_write\" declared implicitly",
+    "old_line": 234,
+    "new_line": 198,
+    "old_statement": "(void)uart_write(&status_code, 1U);",
+    "new_statement": "(void)uart_write(&status_code, 1U);",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/eeprom_console.c",
+    "id": "223-D",
+    "message": "function \"uart_write\" declared implicitly",
+    "old_line": 250,
+    "new_line": 213,
+    "old_statement": "(void)uart_write(output, 3U);",
+    "new_statement": "(void)uart_write(output, 3U);",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/eeprom_console.c",
+    "id": "223-D",
+    "message": "function \"uart_write\" declared implicitly",
+    "old_line": 292,
+    "new_line": 252,
+    "old_statement": "(void)uart_write(output, length);",
+    "new_statement": "(void)uart_write(output, length);",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/eeprom_console.c",
+    "id": "223-D",
+    "message": "function \"uart_write\" declared implicitly",
+    "old_line": 297,
+    "new_line": 257,
+    "old_statement": "(void)uart_write(text, length);",
+    "new_statement": "(void)uart_write(text, length);",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/savefunc.c",
+    "id": "177-D",
+    "message": "variable \"DataS\"  was declared but never referenced",
+    "old_line": 13,
+    "new_line": 23,
+    "old_statement": "{ u8 Tem_i=0,DataS=0xAA;",
+    "new_statement": "u8 Tem_i = 0, DataS = 0xAA;",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/savefunc.c",
+    "id": "177-D",
+    "message": "variable \"Tem_i\"  was declared but never referenced",
+    "old_line": 13,
+    "new_line": 23,
+    "old_statement": "{ u8 Tem_i=0,DataS=0xAA;",
+    "new_statement": "u8 Tem_i = 0, DataS = 0xAA;",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/savefunc.c",
+    "id": "177-D",
+    "message": "variable \"Tem_data\"  was declared but never referenced",
+    "old_line": 14,
+    "new_line": 24,
+    "old_statement": "u32 Tem_data[30];",
+    "new_statement": "u32 Tem_data[30];",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/savefunc.c",
+    "id": "177-D",
+    "message": "variable \"temxifen\"  was declared but never referenced",
+    "old_line": 15,
+    "new_line": 25,
+    "old_statement": "s32 temxifen;",
+    "new_statement": "s32 temxifen;",
+    "source_token_order_unchanged": true
+  },
+  {
+    "file": "../user/savefunc.c",
+    "id": "177-D",
+    "message": "variable \"temaa\"  was declared but never referenced",
+    "old_line": 16,
+    "new_line": 26,
+    "old_statement": "u8 temaa;",
+    "new_statement": "u8 temaa;",
+    "source_token_order_unchanged": true
+  }
+]

@@ -1,0 +1,107 @@
+{
+  "changed_program_sources": [
+    "FCM4E1553 Ethercat/SYSTEM/delay/systick.c",
+    "FCM4E1553 Ethercat/SYSTEM/delay/systick.h",
+    "FCM4E1553 Ethercat/User/DriveSafety.h",
+    "FCM4E1553 Ethercat/User/n32g45x_it.c"
+  ],
+  "plc_files": [
+    {
+      "path": "FCM_Homing.plcproj",
+      "unchanged": true
+    },
+    {
+      "path": "GVLs/GVL_FCM_IO.TcGVL",
+      "unchanged": true
+    },
+    {
+      "path": "GVLs/GVL_HM.TcGVL",
+      "unchanged": true
+    },
+    {
+      "path": "GVLs/GVL_STEP_IO.TcGVL",
+      "unchanged": true
+    },
+    {
+      "path": "PlcTask.TcTTO",
+      "unchanged": true
+    },
+    {
+      "path": "POUs/MAIN.TcPOU",
+      "unchanged": true
+    }
+  ],
+  "initial_runtime_patch_record_before_phase1": true,
+  "phase1_20261103": {
+    "files_modified": [
+      "AdcInit.c",
+      "AdcInit.h",
+      "DriveBoot.c",
+      "DriveBoot.h",
+      "DriveCurrent.c",
+      "DriveCurrent.h",
+      "DriveCurrentObjects.h",
+      "DriveFault.c",
+      "DriveFault.h",
+      "DriveFaultObjects.h",
+      "DriveHoming.h",
+      "DriveHomingImpl.h",
+      "DriveHomingObjects.h",
+      "DriveParameterObjects.h",
+      "DriveParameters.c",
+      "DriveParameters.h",
+      "DriveSafety.c",
+      "DriveSafety.h",
+      "DriveTelemetry.c",
+      "DriveTelemetry.h",
+      "DriveTelemetryObjects.h",
+      "EcatPulsePosition.h",
+      "Errorhadle.c",
+      "Errorhadle.h",
+      "EthercatMotorControl.c",
+      "EthercatMotorControl.h",
+      "Flash.h",
+      "IoIntInit.c",
+      "IoIntInit.h",
+      "MotionPID.h",
+      "N32G45XSYS.h",
+      "PulseHandle.c",
+      "PulseHandle.h",
+      "PwmInit.c",
+      "PwmInit.h",
+      "SaveFunc.c",
+      "SaveFunc.h",
+      "SciInit.c",
+      "SciInit.h",
+      "can.c",
+      "can.h",
+      "eeprom.c",
+      "eeprom.h",
+      "eeprom_console.c",
+      "eeprom_console.h",
+      "exti.c",
+      "exti.h",
+      "flash.c",
+      "main.c",
+      "main.h",
+      "mcuinit.h",
+      "n32g45x_it.c",
+      "n32g45x_it.h",
+      "qep.h",
+      "qspi.c",
+      "qspi.h",
+      "rs485.c",
+      "rs485.h",
+      "timer.c",
+      "timer.h",
+      "u_i2c.c",
+      "u_i2c.h",
+      "uartc.c",
+      "uartc.h"
+    ],
+    "token_sequences_unchanged": true,
+    "include_guard_macro_changes": 0,
+    "hex_bytes_unchanged": true,
+    "acceptance_report": "validation/Phase1_验收报告.md"
+  }
+}

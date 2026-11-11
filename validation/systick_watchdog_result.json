@@ -1,0 +1,12 @@
+{
+  "passed": 4,
+  "cases": [
+    "1 ms periodic SysTick, lowest priority, actual vector and handler heartbeat",
+    "zero, multi-chunk and wrapping delays never reconfigure or stop SysTick",
+    "1000 real SysTick IRQ heartbeats feed watchdog; each stalled path blocks feeding",
+    "all four actual fatal vectors invoke immediate PWM output-off"
+  ],
+  "old_15_observation": {},
+  "firmware": "FCM_Protection_SysTickFix_20261103.axf",
+  "hardware_tested": false
+}

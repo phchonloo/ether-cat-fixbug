@@ -1,0 +1,40 @@
+PASS complete four-byte read/write succeed
+PASS zero/oversized low-level transfers rejected before NDF/FIFO access
+PASS busy timeout is bounded; successful traffic never auto-clears fault
+PASS DWT deadline remains bounded across CYCCNT rollover
+PASS read completion timeout does not consume/publish FIFO
+PASS short FIFO fails atomically and first-error evidence is preserved
+PASS write completion timeout aborts without replay
+PASS 32 aligned/unaligned block reads; bounded staging and PRIMASK restore
+PASS middle-chunk read failure returns zeros/status, no mixed PDO
+PASS middle-chunk write failure stops further ESC writes
+PASS failed PDO read never reaches application; failed TxPDO is counted
+PASS manual re-arm requires OP, fresh PDOs, low-before-reset and disabled/stationary
+PASS fresh PDO reset edge required; early/held-high/SDO-only requests rejected
+PASS PDI fault immediately inhibits phase commands and reports CiA402 communication error
+PASS real motor ISR skips algorithm and commands zero PWM on PDI fault
+PASS SyncManager waits exit on write failure or bounded acknowledgement timeout
+PASS first OP exit survives recovery and later AL transitions
+PASS OP exit is recorded even when SSC preassigns nAlStatus
+PASS real SSC AL_ControlInd path records OP exit and timing evidence
+PASS OP error-bit transition preserves retained AL code and first evidence
+PASS enabled PDO gap excludes start/disabled gaps; DWT enable and wrap handled
+PASS master disable preserves first-cycle/PDO/gap evidence and still stops motor
+PASS ARM burst publishes a second controlword-zero PDO instead of discarding it
+PASS ARM burst read failure publishes no partial/zero data and cannot auto-clear fault
+PASS ARM IRQ clears entry edge only; a new edge during service stays pending
+PASS ARM hardware IRQ retains second-PDO stop and never exceeds two full copies
+PASS ARM IRQ burst failure retains PDI fault and publishes no partial command
+PASS ARM SYNC0 clears before service and retains an edge arriving during it
+PASS ARM two idle low observations request IRQ once; pending work is not duplicated
+PASS ARM live PDI progress including counter wrap resets stuck-line qualification
+PASS ARM high line, pending edge or masked EXTI resets the recovery qualifier
+PASS ARM repeated stuck-line requests are bounded and preserve fault/AL/drive state
+PASS ARM IRQ diagnostics saturate without disabling subsequent recovery requests
+PASS ARM IRQ timing handles DWT wrap and ignores disabled or stopped counters
+PASS ARM priorities: motor above ESC IRQ above SYNC0; SYNC1 unconfigured
+PASS unwired SYNC1 masked and cleared; HW_Init cannot re-enable it
+PASS main boot configuration preserves motor priority above ESC IRQ
+37 ARM firmware fault-injection/configuration tests passed (mocked hardware).
+
+STDERR:

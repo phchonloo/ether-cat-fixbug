@@ -1,0 +1,7 @@
+PASS 1 ms periodic SysTick, lowest priority, actual vector and handler heartbeat
+PASS zero, multi-chunk and wrapping delays never reconfigure or stop SysTick
+PASS 1000 real SysTick IRQ heartbeats feed watchdog; each stalled path blocks feeding
+PASS all four actual fatal vectors invoke immediate PWM output-off
+PASS 4 timer/watchdog integration groups
+
+STDERR:

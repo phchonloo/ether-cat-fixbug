@@ -1,0 +1,148 @@
+COMPILE ..\User\DriveSafety.c
+
+COMPILE ..\User\DriveParameters.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_iwdg.c
+
+COMPILE ..\..\Libraries\CMSIS\device\system_n32g45x.c
+
+COMPILE ..\Ethercat\port\el9800hw.c
+
+COMPILE ..\User\main.c
+
+COMPILE ..\User\EthercatMotorControl.c
+
+COMPILE ..\User\Timer.c
+
+COMPILE ..\User\QSPI.c
+
+COMPILE ..\User\DriveTelemetry.c
+
+COMPILE ..\User\DriveCurrent.c
+
+COMPILE ..\User\DriveFault.c
+
+COMPILE ..\User\DriveBoot.c
+
+COMPILE ..\User\AdcInit.c
+
+COMPILE ..\User\PwmInit.c
+
+COMPILE ..\User\can.c
+
+COMPILE ..\User\eeprom.c
+
+COMPILE ..\User\eeprom_console.c
+"..\User\eeprom_console.c", line 45: Warning:  #223-D: function "uart_read" declared implicitly
+      length = uart_read(received, (uint16_t)sizeof(received));
+               ^
+"..\User\eeprom_console.c", line 198: Warning:  #223-D: function "uart_write" declared implicitly
+      (void)uart_write(&status_code, 1U);
+            ^
+"..\User\eeprom_console.c", line 213: Warning:  #223-D: function "uart_write" declared implicitly
+          (void)uart_write(output, 3U);
+                ^
+"..\User\eeprom_console.c", line 252: Warning:  #223-D: function "uart_write" declared implicitly
+      (void)uart_write(output, length);
+            ^
+"..\User\eeprom_console.c", line 257: Warning:  #223-D: function "uart_write" declared implicitly
+      (void)uart_write(text, length);
+            ^
+..\User\eeprom_console.c: 5 warnings, 0 errors
+
+COMPILE ..\User\IoIntInit.c
+
+COMPILE ..\User\rs485.c
+
+COMPILE ..\User\exti.c
+
+COMPILE ..\User\SciInit.c
+
+COMPILE ..\User\n32g45x_it.c
+
+COMPILE ..\User\flash.c
+
+COMPILE ..\User\u_i2c.c
+
+COMPILE ..\User\uartc.c
+
+COMPILE ..\User\PulseHandle.c
+
+COMPILE ..\User\Errorhadle.c
+
+COMPILE ..\User\SaveFunc.c
+"..\User\SaveFunc.c", line 23: Warning:  #177-D: variable "Tem_i"  was declared but never referenced
+      u8 Tem_i = 0, DataS = 0xAA;
+         ^
+"..\User\SaveFunc.c", line 23: Warning:  #177-D: variable "DataS"  was declared but never referenced
+      u8 Tem_i = 0, DataS = 0xAA;
+                    ^
+"..\User\SaveFunc.c", line 24: Warning:  #177-D: variable "Tem_data"  was declared but never referenced
+      u32 Tem_data[30];
+          ^
+"..\User\SaveFunc.c", line 25: Warning:  #177-D: variable "temxifen"  was declared but never referenced
+      s32 temxifen;
+          ^
+"..\User\SaveFunc.c", line 26: Warning:  #177-D: variable "temaa"  was declared but never referenced
+      u8 temaa;
+         ^
+..\User\SaveFunc.c: 5 warnings, 0 errors
+
+COMPILE ..\RS485_ModbusRTU\modbus.c
+
+COMPILE ..\Ethercat\src\coeappl.c
+
+COMPILE ..\Ethercat\src\ecatappl.c
+
+COMPILE ..\Ethercat\src\cia402appl.c
+
+COMPILE ..\Ethercat\src\ecatcoe.c
+
+COMPILE ..\Ethercat\src\ecatslv.c
+
+COMPILE ..\Ethercat\src\mailbox.c
+
+COMPILE ..\Ethercat\src\objdef.c
+
+COMPILE ..\Ethercat\src\sdoserv.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\misc.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_adc.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_can.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_dac.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_dma.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_exti.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_flash.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_gpio.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_i2c.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_pwr.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_rcc.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_spi.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_tim.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_usart.c
+
+COMPILE ..\..\Libraries\n32g45x_std_periph_driver\src\n32g45x_qspi.c
+
+COMPILE ..\SYSTEM\sys\sys.c
+
+COMPILE ..\SYSTEM\delay\systick.c
+"..\SYSTEM\delay\systick.c", line 19: Warning:  #550-D: variable "fac_ms"  was set but never used
+  static u16 fac_ms=0;							//ms寤舵椂鍊嶄箻鏁?,鍦╫s涓?,浠ｈ〃姣忎釜鑺傛媿鐨刴s鏁?
+             ^
+..\SYSTEM\delay\systick.c: 1 warning, 0 errors
+
+LINK
+Program Size: Code=86496 RO-data=5888 RW-data=6280 ZI-data=13296  

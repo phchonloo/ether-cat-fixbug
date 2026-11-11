@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.13">
+<GVL Name="GVL_FCM_IO" Id="{bb0e6207-bf27-4556-9b66-08a1be5c577b}">
+<Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+    qControlWord AT %Q* : UINT; // 1600 / 6040:00
+    qTargetPosition AT %Q* : DINT; // 1600 / 607A:00
+    qTargetVelocity AT %Q* : DINT; // 1600 / 60FF:00; fixed zero
+    qMode AT %Q* : SINT; // 1600 / 6060:00; fixed 6; HM
+    iStatusWord AT %I* : UINT; // 1A00 / 6041:00
+    iActualPosition AT %I* : DINT; // 1A00 / 6064:00
+    iActualVelocity AT %I* : DINT; // 1A00 / 606C:00; diagnostic only
+    iModeDisplay AT %I* : SINT; // 1A00 / 6061:00
+    iWcState AT %I* : BOOL; // THIS BOX WcState
+    iEthercatState AT %I* : UINT; // THIS BOX InfoData/State
+END_VAR
+]]></Declaration>
+</GVL>
+</TcPlcObject>

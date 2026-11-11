@@ -1,0 +1,51 @@
+PASS defaults, standard homing objects and 3000 parameter defaults
+PASS all 16 real GPIOA input combinations and 60FD mapping
+PASS real SDO bounds, lengths, unsupported methods, CA and write locking
+PASS HM 17 inactive initial switch, reverse release, exact phase accounting and held-start nonrepeat
+PASS HM 17 active initial switch, reverse release, exact phase accounting and held-start nonrepeat
+PASS HM 18 inactive initial switch, reverse release, exact phase accounting and held-start nonrepeat
+PASS HM 18 active initial switch, reverse release, exact phase accounting and held-start nonrepeat
+PASS method 37 offset rebases counts without moving Iangle
+PASS held start on enable cannot start motion without a new low/high edge
+PASS bounded homing failure: timeout
+PASS bounded homing failure: travel
+PASS bounded homing failure: two_limits
+PASS bounded homing failure: opposite
+PASS bit 4 low cancels with deceleration, no false attained
+PASS Halt cancels with deceleration, no automatic restart
+PASS existing immediate power/motion inhibit: op
+PASS existing immediate power/motion inhibit: fault
+PASS existing immediate power/motion inhibit: disable
+PASS HM to CSP with fresh actual-position target does not replay a stale target
+PASS HM 609A fractional ramp keeps physical units independently of 2000
+PASS moving start is rejected and decelerates using initialized HM ramp
+PASS short limit pulse is debounced, stable limit begins backoff
+PASS digital input and homing diagnostics cannot be written via SDO
+PASS HOME 19 initial OFF: correct speed/direction, selected edge, hold and counted reference
+PASS HOME 19 initial ON: correct speed/direction, selected edge, hold and counted reference
+PASS HOME 20 initial OFF: correct speed/direction, selected edge, hold and counted reference
+PASS HOME 20 initial ON: correct speed/direction, selected edge, hold and counted reference
+PASS HOME 21 initial OFF: correct speed/direction, selected edge, hold and counted reference
+PASS HOME 21 initial ON: correct speed/direction, selected edge, hold and counted reference
+PASS HOME 22 initial OFF: correct speed/direction, selected edge, hold and counted reference
+PASS HOME 22 initial ON: correct speed/direction, selected edge, hold and counted reference
+PASS HOME X1 rising and falling short pulses are debounced
+PASS HOME entry-reference short pulse cannot falsely complete
+PASS HOME 19 initial False stops before moving into its active directional limit
+PASS HOME 19 initial True stops before moving into its active directional limit
+PASS HOME 20 initial False stops before moving into its active directional limit
+PASS HOME 20 initial True stops before moving into its active directional limit
+PASS HOME 21 initial False stops before moving into its active directional limit
+PASS HOME 21 initial True stops before moving into its active directional limit
+PASS HOME 22 initial False stops before moving into its active directional limit
+PASS HOME 22 initial True stops before moving into its active directional limit
+PASS HOME may move away from an active opposite-direction limit
+PASS HOME held ON produces the existing bounded timeout error 5
+PASS HOME reference move retains the maximum-excursion protection
+PASS HOME pulse lost during search braking cannot select the wrong reference edge
+PASS HOME release reference applies signed 607C without replaying excitation
+PASS HOME 21 reversal cannot emit a positive step into an already active X3
+PASS HOME 19 reversal cannot emit a negative step into an already active X2
+48 homing ARM tests passed; no hardware was operated.
+
+STDERR:

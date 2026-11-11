@@ -1,0 +1,735 @@
+{
+  "phase": 1,
+  "target": "C:\\Users\\pc\\Desktop\\最新固件与PLC_20261029\\15A_FCM_Protection_SysTickFix_20261103",
+  "files_modified": 64,
+  "file_banners_added": 64,
+  "existing_comments_removed": 0,
+  "commented_code_removed": 0,
+  "encoding": "CP936 without BOM; qep.c excluded",
+  "compile_errors": 0,
+  "baseline_warning_count": 11,
+  "final_warning_count": 11,
+  "warning_id_file_message_multiset_equal": true,
+  "warning_line_mapping": "告警逐条映射.json",
+  "hex_file_bytes_equal": true,
+  "hex_address_payload_equal": true,
+  "hex_sha256": "9d42a1f0555d96d3f923515c385c5b99416f85f4a34dc4d0c65cae18e3895529",
+  "hex_payload_bytes": 94188,
+  "include_added": 0,
+  "include_removed": 0,
+  "include_order_changed": false,
+  "guard_changes": 0,
+  "macro_changes": 0,
+  "frozen_inputs_verified": 123,
+  "qep_c_untouched_unverified": true,
+  "hardware_operated": false,
+  "files": [
+    {
+      "file": "AdcInit.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "AdcInit.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveBoot.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveBoot.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveCurrent.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveCurrent.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveCurrentObjects.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveFault.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveFault.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveFaultObjects.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveHoming.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveHomingImpl.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveHomingObjects.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveParameterObjects.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveParameters.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveParameters.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveSafety.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveSafety.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveTelemetry.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveTelemetry.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "DriveTelemetryObjects.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "EcatPulsePosition.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "Errorhadle.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "Errorhadle.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "EthercatMotorControl.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "EthercatMotorControl.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "Flash.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "IoIntInit.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "IoIntInit.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "MotionPID.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "N32G45XSYS.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "PulseHandle.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "PulseHandle.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "PwmInit.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "PwmInit.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "SaveFunc.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "SaveFunc.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "SciInit.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "SciInit.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "can.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "can.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "eeprom.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "eeprom.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "eeprom_console.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "eeprom_console.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "exti.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "exti.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "flash.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "main.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "main.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "mcuinit.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "n32g45x_it.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "n32g45x_it.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "qep.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "qspi.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "qspi.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "rs485.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "rs485.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "timer.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "timer.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "u_i2c.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "u_i2c.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "uartc.c",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    },
+    {
+      "file": "uartc.h",
+      "encoding": "CP936, no BOM",
+      "crlf": true,
+      "token_sequence_equal": true,
+      "literal_bytes_equal": true,
+      "existing_comment_words_equal": true,
+      "include_and_macro_blocks_equal": true,
+      "new_file_banners": 1
+    }
+  ],
+  "replay_scripts": [
+    {
+      "script": "tools/build_protection_esi.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_systick_watchdog.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_limits.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_plc_protection_bridge.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_protection.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_drive_boot.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_homing.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_drive_current.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_drive_faults.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_plc_home_switch.py",
+      "exit": 0
+    },
+    {
+      "script": "plc_tests/verify.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_pdi_faults.py",
+      "exit": 0
+    },
+    {
+      "script": "tests/verify_pulse_position.py",
+      "exit": 0
+    },
+    {
+      "script": "tools/check_release.py",
+      "exit": 0
+    }
+  ],
+  "numbered_legacy_replay_cases": 225,
+  "systick_integration_groups": 4,
+  "homing_cases": 48,
+  "pulse_replay_passed": true,
+  "original_rebuilds_equal": 2,
+  "final_rebuilds_equal": 2,
+  "filewise_compile_units": 855,
+  "header_declaration_probes": 1,
+  "axf_sha256": "16dd2ec3c76425b9e15a7b1148c5859fd7b2691c803d444ce89482bb3b20db84"
+}

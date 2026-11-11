@@ -1,0 +1,13 @@
+{
+  "passed": 7,
+  "cases": [
+    "cold boot calibrates zero without energizing either phase",
+    "retained enable cannot borrow calibration permission",
+    "out-of-range ADC baseline fails with PWM off",
+    "noisy ADC baseline fails with PWM off",
+    "24 V startup under-voltage remains latched and disabled",
+    "24 V startup over-voltage remains latched and disabled",
+    "running motor: undervoltage PDO, reset edge, red LED clears and fresh motion after DMA gaps"
+  ],
+  "hardware_operated": false
+}

@@ -1,0 +1,35 @@
+PASS defaults: voltage and stationary phase enabled; diagnostic objects are read-only
+PASS real SDO bounds, length, CA and PREOP/disabled checks
+PASS undervoltage <18 V confirmed for 50 ms stops PWM and latches 13
+PASS overvoltage >30 V confirmed for 10 ms stops PWM and latches 14
+PASS threshold equality, glitches and long scheduler gaps do not falsely accumulate
+PASS 500 ms startup undervoltage grace, then 50 ms confirmation
+PASS reset requires 19..29 V for 200 ms and released VFO; no automatic enable
+PASS first fault wins across ISR/foreground; PRIMASK preserved and unknown codes rejected
+PASS enabled per-phase overcurrent handles negative current and reports standard 2310h
+PASS stationary phase A missing: 300 ms settled reference plus 200 ms confirmation
+PASS stationary phase B missing: independent nonzero-reference gate
+PASS phase test excludes low reference, rotation, healthy current and disabled motor
+PASS brief motion between millisecond samples restarts phase settling
+PASS brief reference change between millisecond samples restarts phase settling
+PASS real ADC phase detection survives 8 ms foreground gaps and starts red alarm
+PASS fixed-rate raw phase detector accepts measured current at the reference
+PASS stopped ADC invalidates phase qualification and reports sensor failure
+PASS DMA error resets phase confirmation; new good samples must settle again
+PASS invalid voltage is sampling fault 15, not a fabricated 0 V/phase fault
+PASS repeated sample cannot qualify overvoltage or healthy recovery
+PASS repeated raw frames cannot qualify sustained overvoltage
+PASS millisecond wrap does not reintroduce startup undervoltage grace
+PASS actual 16 kHz divider, foreground stall latch, 500 ms red phase and no Y1 lamp writes
+PASS real CiA402 fault, 603F/1001/206C reads and 20-byte optional PDO bytes
+PASS rejected communication re-arm retains motor report; a new reset edge is required
+PASS mailbox 6040=128 survives a cyclic overwrite and cannot automatically enable
+PASS early mailbox reset is rejected once; recovery requires a new explicit request
+PASS mailbox reset cannot bypass the fresh PDO gate for a PDI communication fault
+PASS unprocessed mailbox reset expires after 100 ms
+PASS 2032 reports independent voltage, qualification, VFO, stale and phase reset blockers
+PASS periodic voltage/phase recovery survives foreground jitter but rejects stale data
+PASS real DMA -> converted snapshot -> detector and reset-time 5 ms freshness check
+PASS 32 compiled ARM fault tests (no hardware was operated).
+
+STDERR:

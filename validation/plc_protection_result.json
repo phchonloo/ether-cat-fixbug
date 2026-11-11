@@ -1,0 +1,10 @@
+{
+  "passed": 4,
+  "cases": [
+    "real CiA402 + delivered PLC: disabled PDO, manual enable, HOME21 success and enabled hold",
+    "MCU restart with old PLC enable: no automatic restart while ready",
+    "MCU restart during HOME: latched PLC error, new enable edge required",
+    "valid bus recovery alone cannot resume the PLC motion sequence"
+  ],
+  "hardware_operated": false
+}
